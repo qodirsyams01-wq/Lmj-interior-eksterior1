@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LMJ INTERIOR EKSTERIOR Design | Lumajang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --coklat-gelap: #4A2B0F;
+            --coklat-lembut: #6B3A15;
+            --oranye: #FF8822;
+            --oranye-terang: #FFA056;
+            --krem: #FFF8EF;
+            --putih: #FFFFFF;
+            --abu-lembut: #F9F2E8;
+            --bayangan: rgba(74, 43, 15, 0.12);
+        }
+
+        body {
+            background-color: var(--krem);
+            color: var(--coklat-gelap);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--coklat-gelap), var(--coklat-lembut));
+            color: var(--putih);
+            padding: 2rem 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-wadah {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .logo-perusahaan {
+            max-width: 140px;
+            height: auto;
+            border-radius: 12px;
+            background-color: var(--putih);
+            padding: 0.5rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #FFE2C2;
+        }
+
+        nav {
+            background-color: var(--putih);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px var(--bayangan);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            display: block;
+            padding: 1rem 1.1rem;
+            color: var(--coklat-gelap);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            color: var(--oranye);
+            border-bottom: 3px solid var(--oranye);
+        }
+
+        section {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 4rem 1.8rem;
+        }
+
+        .bagian-judul {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--coklat-gelap);
+            font-size: 2rem;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--oranye), var(--oranye-terang));
+            border-radius: 2px;
+        }
+
+        .kotak-putih {
+            background-color: var(--putih);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px var(--bayangan);
+        }
+
+        .gambar-besar {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            object-fit: cover;
+        }
+
+        .riwayat-daftar {
+            margin-top: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .riwayat-daftar li {
+            margin: 0.7rem 0;
+            padding-left: 0.5rem;
+            position: relative;
+            list-style: none;
+        }
+
+        .riwayat-daftar li::before {
+            content: "✅";
+            position: absolute;
+            left: -2rem;
+        }
+
+        .galeri-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .galeri-kartu {
+            background-color: var(--putih);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px var(--bayangan);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .galeri-kartu:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(74, 43, 15, 0.18);
+        }
+
+        .galeri-gambar {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: var(--abu-lembut);
+            transition: transform 0.4s ease;
+        }
+
+        .galeri-kartu:hover .galeri-gambar {
+            transform: scale(1.05);
+        }
+
+        .galeri-keterangan {
+            padding: 1rem;
+            text-align: center;
+            color: var(--coklat-gelap);
+            font-weight: 500;
+        }
+
+        .galeri-catatan {
+            background-color: #F0F4FF;
+            border-left: 4px solid #4A80F0;
+            padding: 1rem 1.2rem;
+            border-radius: 0 10px 10px 0;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .video-kartu {
+            background-color: var(--putih);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px var(--bayangan);
+            transition: transform 0.3s;
+        }
+
+        .video-kartu:hover {
+            transform: translateY(-6px);
+        }
+
+        .video-pemutar {
+            width: 100%;
+            height: 220px;
+            background-color: #000;
+        }
+
+        .video-keterangan {
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .video-keterangan h4 {
+            color: var(--oranye);
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        .video-keterangan p {
+            color: #7A5230;
+            font-size: 0.95rem;
+        }
+
+        .paket-harga {
+            border: 2px solid #E8D9C7;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .paket-harga:hover {
+            border-color: var(--oranye);
+            box-shadow: 0 4px 12px rgba(255, 136, 34, 0.15);
+        }
+
+        .paket-harga h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .harga-angka {
+            background: linear-gradient(135deg, var(--coklat-gelap), var(--coklat-lembut));
+            color: var(--putih);
+            padding: 0.3rem 0.8rem;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .paket-harga ul {
+            padding-left: 1.5rem;
+        }
+
+        .paket-harga ul li {
+            margin: 0.4rem 0;
+        }
+
+        .catatan-penting, .spesifikasi-bahan, .garansi-box {
+            background-color: #FFF3E5;
+            border-left: 4px solid var(--oranye);
+            padding: 1.2rem;
+            border-radius: 0 10px 10px 0;
+            margin-top: 2rem;
+        }
+
+        .tabel-produk {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .tabel-produk th,
+        .tabel-produk td {
+            padding: 0.85rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #E8D9C7;
+        }
+
+        .tabel-produk th {
+            background-color: var(--coklat-gelap);
+            color: var(--putih);
+        }
+
+        .tabel-produk tr:hover {
+            background-color: var(--abu-lembut);
+        }
+
+        .sub-judul-harga {
+            color: var(--oranye);
+            margin: 2.5rem 0 1rem 0;
+            font-size: 1.1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px dashed #FFD2A8;
+        }
+
+        .testimoni-baris {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .testimoni-kartu {
+            background-color: var(--putih);
+            padding: 1.8rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px var(--bayangan);
+            border-left: 4px solid var(--oranye);
+        }
+
+        .testimoni-teks {
+            font-style: italic;
+            color: #5C3A1E;
+            margin-bottom: 1rem;
+        }
+
+        .testimoni-nama {
+            font-weight: 600;
+            color: var(--coklat-gelap);
+        }
+
+        .kontak-info p {
+            margin: 1rem 0;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.7rem;
+        }
+
+        .sosmed {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tombol-sosmed {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: linear-gradient(135deg, var(--coklat-gelap), var(--coklat-lembut));
+            color: var(--putih);
+            padding: 0.9rem 1.4rem;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 8px rgba(74, 43, 15, 0.15);
+        }
+
+        .tombol-sosmed i {
+            font-size: 1.2rem;
+        }
+
+        .tombol-sosmed:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(74, 43, 15, 0.2);
+        }
+
+        .tombol-sosmed.wa:hover { background: linear-gradient(135deg, #25D366, #128C7E); }
+        .tombol-sosmed.ig:hover { background: linear-gradient(135deg, #833AB4, #FD1D1C, #F77737); }
+        .tombol-sosmed.tiktok:hover { background: linear-gradient(135deg, #000000, #25F4EE, #FF0050); }
+
+        .peta-judul {
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            color: var(--coklat-gelap);
+        }
+
+        .peta-wadah {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px var(--bayangan);
+        }
+
+        .peta-wadah iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+        }
+
+        footer {
+            background-color: var(--coklat-gelap);
+            color: #FFE2C2;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.6rem; }
+            section { padding: 2.5rem 1.2rem; }
+            .kotak-putih { padding: 1.8rem 1.4rem; }
+            nav a { padding: 0.9rem 0.8rem; font-size: 0.9rem; }
+            .video-pemutar { height: 180px; }
+            .peta-wadah iframe { height: 250px; }
+            .tabel-produk th, .tabel-produk td { padding: 0.7rem 0.5rem; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo-wadah">
+        <img src="logo-lmj.jpeg" alt="Logo LMJ INTERIOR EKSTERIOR" class="logo-perusahaan">
+    </div>
+    <h1>🏠 LMJ INTERIOR EKSTERIOR Design</h1>
+    <p>Mewujudkan Ruang Impian — Berpengalaman Lebih dari 12 Tahun</p>
+</header>
+
+<!-- NAVIGASI -->
+<nav>
+    <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#riwayat">Riwayat Proyek</a></li>
+        <li><a href="#galeri-foto">Galeri Foto</a></li>
+        <li><a href="#galeri-video">Galeri Video</a></li>
+        <li><a href="#harga">Daftar Harga</a></li>
+        <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+    </ul>
+</nav>
+
+<!-- BAGIAN PROFIL -->
+<section id="profil">
+    <div class="bagian-judul">
+        <h2>Tentang Kami</h2>
+    </div>
+    <div class="kotak-putih">
+        <img src="Workshop-lmj.jpg" alt="Contoh Desain Interior" class="gambar-besar">
+
+        <p><strong>LMJ INTERIOR EKSTERIOR Design</strong> berdiri sejak tahun <strong>2014</strong> hingga saat ini. Awalnya dimulai sebagai <strong>industri rumah tangga (home industri) produk furnitur</strong>, seiring berjalannya waktu terus berkembang menjadi pelayanan <strong>desain dan produk interior kustom</strong>, dan kini telah merambah ke bidang <strong>desain serta jasa kontraktor bangunan</strong>.</p>
+        <br>
+        <p>Berlokasi di <strong>Jl. Mayor Kamari Sampurno No.58, Ditotrunan, Kec. Lumajang, Kab. Lumajang, Jawa Timur — Kode Pos 67316</strong>. Kami berkomitmen menghadirkan hasil karya yang rapi, indah, dan berfungsi optimal sesuai keinginan Anda.</p>
+
+        <img src="workshop-lmj.jpeg" alt="Profil Perusahaan" class="gambar-besar">
+    </div>
+</section>
+
+<!-- BAGIAN RIWAYAT PROYEK -->
+<section id="riwayat">
+    <div class="bagian-judul">
+        <h2>📋 Riwayat Proyek</h2>
+    </div>
+    <div class="kotak-putih">
+        <p style="margin-bottom:1.5rem;">Sejak berdiri, kami telah dipercaya mengerjakan berbagai proyek untuk instansi pendidikan, instansi pemerintahan, maupun proyek perorangan dan komersial. Berikut beberapa proyek yang telah kami selesaikan:</p>
+
+        <h3 style="color:var(--oranye); margin-bottom:1rem; font-size:1.1rem;">🏫 Proyek Instansi & Pendidikan</h3>
+        <ul class="riwayat-daftar">
+            <li>Kantor kejaksaan Negeri — Lumajang</li>
+            <li>Kantor Ikatan Bidan Indonesia — Cabang Lumajang</li>
+            <li>Kantor Bintang Indonesia — Lumajang</li>
+            <li>Kantor INNOVASI — Batu, Malang</li>
+            <li>SMKN 1 Pasirian — Lumajang</li>
+            <li>SMKN 1 Lumajang</li>
+            <li>SMKN 2 Lumajang</li>
+            <li>SMKN 1 Senduro</li>
+            <li>SMKN 1 Tempeh</li>
+            <li>SMKN 1 jember</li>
+            <li>SMKN 2 Jember</li>
+            <li>SMKN 1 Tempursari</li>
+            <li>SMKN 1 asy syarify</li>
+            <li>SMAN 1 Lumajang</li>
+            <li>SMAN 2 Lumajang</li>
+            <li>SMAN 3 Lumajang</li>
+            <li>SMKN 1 Klakah</li>
+            <li>SMKN Tekung — Lumajang</li>
+            <li>Bangunan Laboratorium Sekolah SD Citro Diwangsan 2</li>
+            <li>Dan berbagai proyek bangunan/Interior lainnya</li>
+        </ul>
+
+        <h3 style="color:var(--oranye); margin:2.5rem 0 1rem 0; font-size:1.1rem;">🏠 Proyek Interior</h3>
+        <ul class="riwayat-daftar">
+            <li>Interior Rumah contoh Perum Bintang Indonesia</li>
+            <li>Interior Lobby Kantor Perum Grand zam zam</li>
+            <li>Interior Rumah Owner Toko Tridjaya</li>
+            <li>Interior Rumah Owner Neisya Drink</li>
+            <li>Interior Rumah Bu Dr. Hani — Ranuyoso</li>
+            <li>Interior Rumah Bapak Bupati Thoriq Hak</li>
+            <li>Interior Rumah Bu Indah — Bupati Lumajang</li>
+            <li>Interior Elmer Gym — Kencong & Lumajang</li>
+            <li>Interior Butik Dian Zara</li>
+            <li>Interior Lobby Ryo Percetakan dan Rio BOXAJA</li>
+            <li>Dan berbagai proyek Interior lainnya</li>
+        </ul>
+
+        <h3 style="color:var(--oranye); margin:2.5rem 0 1rem 0; font-size:1.1rem;">🏗️ Proyek Bangunan</h3>
+        <ul class="riwayat-daftar">
+            <li>Rumah Bapak H. Agus Jokarto</li>
+            <li>Rumah Dr. Farid — Kebonagung</li>
+            <li>Rumah Bapak H. Indra / Bu Bidan Hj. Ifana — Tumpeng, Candipuro</li>
+            <li>Rumah Bapak H. Margo — Perum The Royal Avenue, Lumajang</li>
+            <li>Rumah Bapak Teguh — Candipuro</li>
+            <li>Rumah Bapak Rifkil — Perum Rangga Regency, Sumberejo</li>
+            <li>Rumah Owner Toko Netral — Kunir, Lumajang</li>
+            <li>Dan berbagai proyek bangunan lainnya</li>
+        </ul>
+
+        <p style="margin-top:2rem; color:#5C3A1E; font-style:italic;">Kami siap dipercaya untuk mengerjakan proyek Anda dengan kualitas terbaik, tepat waktu, dan hasil yang memuaskan.</p>
+    </div>
+</section>
+
+<!-- GALERI FOTO -->
+<section id="galeri-foto">
+    <div class="bagian-judul">
+        <h2>📸 Galeri Foto Hasil Karya & Produk</h2>
+    </div>
+    <div class="kotak-putih">
+        <p style="text-align:center; margin-bottom:2rem;">Berikut dokumentasi hasil karya desain, interior, dan bangunan yang telah kami kerjakan.</p>
+
+        <div class="galeri-grid">
+            <div class="galeri-kartu">
+                <img src="Kantor-Innovasi.jpeg" alt="Foto Proyek 1" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 1</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="Innovasi2.jpeg" alt="Foto Proyek 2" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 2</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="Innovasi3.jpeg" alt="Foto Proyek 3" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 3</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="Innovasi4.jpeg" alt="Foto Proyek 4" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 4</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="desain-rumah.jpg" alt="Foto Proyek 5" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 5</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="Proyek6.jpg" alt="Foto Proyek 6" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 6</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="proyek7.jpeg" alt="Foto Proyek 7" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 7</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="Proyek8.jpeg" alt="Foto Proyek 8" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 8</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="Proyek9.jpeg" alt="Foto Proyek 9" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 9</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="Proyek10.jpeg" alt="Foto Proyek 10" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 10</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="Proyek11.jpeg" alt="Foto Proyek 11" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 11</div>
+            </div>
+            <div class="galeri-kartu">
+                <img src="Proyek12.jpeg" alt="Foto Proyek 12" class="galeri-gambar">
+                <div class="galeri-keterangan">Nama Proyek / Hasil Karya 12</div>
+            </div>
+        </div>
+
+        </section>
+
+<!-- GALERI VIDEO -->
+<section id="galeri-video">
+    <div class="bagian-judul">
+        <h2>🎬 Galeri Video Desain & Produk</h2>
+    </div>
+    <div class="video-grid">
+        <div class="video-kartu">
+            <video class="video-pemutar" controls muted>
+                <source src="lobby-smk1.mp4" type="video/mp4">
+                Maaf, peramban Anda tidak mendukung pemutar video.
+            </video>
+            <div class="video-keterangan">
+                <h4>Desain Ruang Tamu</h4>
+                <p>Video tampilan desain 3D ruang tamu</p>
+            </div>
+        </div>
+        <div class="video-kartu">
+            <video class="video-pemutar" controls muted>
+                <source src="lemari-custome1.mp4" type="video/mp4">
+                Maaf, peramban Anda tidak mendukung pemutar video.
+            </video>
+            <div class="video-keterangan">
+                <h4>Proses Pembuatan Lemari</h4>
+                <p>Pengerjaan furnitur kustom</p>
+            </div>
+        </div>
+        <div class="video-kartu">
+            <video class="video-pemutar" controls muted>
+                <source src="desain-rumah.mp4" type="video/mp4">
+                Maaf, peramban Anda tidak mendukung pemutar video.
+            </video>
+            <div class="video-keterangan">
+                <h4>Desain Tampak Depan Rumah</h4>
+                <p>Visualisasi desain eksterior</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================
+🔹 DAFTAR HARGA — SUDAH DIPERBARUI
+====================================== -->
+<section id="harga">
+    <div class="bagian-judul">
+        <h2>💰 Daftar Harga Layanan & Produk</h2>
+    </div>
+    <div class="kotak-putih">
+
+        <!-- DESAIN BANGUNAN -->
+        <h3 class="sub-judul-harga">🏗️ Anggaran Biaya Desain Bangunan (Gedung, Kantor, atau Rumah)</h3>
+
+        <div class="paket-harga">
+            <h4>Paket A <span class="harga-angka">Rp 35.000 / m²</span></h4>
+            <ul>
+                <li>✅ Gambar 2 Dimensi</li>
+                <li>✅ Gambar 3 Dimensi</li>
+                <li>✅ RAB Bangunan</li>
+                <li>✅ Revisi desain 2 kali</li>
+                <li>ℹ️ Selelebihnya dikenakan biaya tambahan Rp 3.000/m² (khusus area yang direvisi)</li>
+            </ul>
+        </div>
+
+        <div class="paket-harga">
+            <h4>Paket B <span class="harga-angka">Rp 65.000 / m²</span></h4>
+            <ul>
+                <li>✅ Gambar 2 Dimensi</li>
+                <li>✅ Gambar 3 Dimensi</li>
+                <li>✅ RAB Bangunan</li>
+                <li>✅ Video Animasi</li>
+                <li>✅ Revisi desain 3 kali</li>
+                <li>ℹ️ Selelebihnya dikenakan biaya tambahan Rp 5.000/m² (khusus area yang direvisi)</li>
+            </ul>
+        </div>
+
+        <div class="paket-harga">
+            <h4>Paket C <span class="harga-angka">Rp 100.000 / m²</span></h4>
+            <ul>
+                <li>✅ Gambar 2 Dimensi (Gambar Kerja)</li>
+                <li>✅ Gambar 3 Dimensi</li>
+                <li>✅ Video Animasi</li>
+                <li>✅ Video 4 Dimensi (Mode Kamera V-Ray)</li>
+                <li>✅ Revisi desain 4 kali</li>
+                <li>ℹ️ Selelebihnya dikenakan biaya tambahan Rp 7.500/m² (khusus area yang direvisi)</li>
+            </ul>
+        </div>
+
+        <!-- DESAIN INTERIOR -->
+        <h3 class="sub-judul-harga">🏠 Harga Desain Interior</h3>
+
+        <div class="paket-harga">
+            <h4>Paket Desain Interior <span class="harga-angka">Rp 25.000 / m²</span></h4>
+            <ul>
+                <li>✅ Desain 2 Dimensi</li>
+                <li>✅ Desain 3 Dimensi</li>
+                <li>✅ RAB Interior</li>
+                <li>✅ Revisi desain 3 kali</li>
+                <li>ℹ️ Selelebihnya dikenakan biaya tambahan Rp 5.000/m²</li>
+                <li>🎁 Jika pengerjaan interior dikerjakan oleh kami → potongan <strong>30% s/d 100%</strong> (tergantung masa promo)</li>
+            </ul>
+        </div>
+
+        <!-- ======================================
+        🔹 DAFTAR HARGA PRODUK INTERIOR CUSTOM
+        ====================================== -->
+        <h3 class="sub-judul-harga">🛋️ PRICE LIST PAKET PRODUK INTERIOR CUSTOM</h3>
+
+        <table class="tabel-produk">
+            <thead>
+                <tr>
+                    <th>Produk</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Wardrobe</td>
+                    <td>IDR 2.100.000 / m²</td>
+                </tr>
+                <tr>
+                    <td>Kitchen Set</td>
+                    <td>IDR 2.100.000 / m¹</td>
+                </tr>
+                <tr>
+                    <td>Backdrop</td>
+                    <td>IDR 950.000 s/d 1.350.000 / m²</td>
+                </tr>
+                <tr>
+                    <td>Wallpanel</td>
+                    <td>IDR 650.000 s/d 950.000 / m²</td>
+                </tr>
+                <tr>
+                    <td>Kabinet TV</td>
+                    <td>IDR 1.750.000 s/d 1.950.000 / m²</td>
+                </tr>
+                <tr>
+                    <td>Sekat Partisi</td>
+                    <td>IDR 1.450.000 / m²</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- DIVAN LACI -->
+        <h3 class="sub-judul-harga">🛏️ DIVAN LACI</h3>
+        <table class="tabel-produk">
+            <thead>
+                <tr>
+                    <th>Ukuran</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Divan Size 90 – 120 cm</td>
+                    <td>IDR 4.250.000 / Unit</td>
+                </tr>
+                <tr>
+                    <td>Divan Size 140 – 160 cm</td>
+                    <td>IDR 5.500.000 / Unit</td>
+                </tr>
+                <tr>
+                    <td>Divan Size 180 – 200 cm</td>
+                    <td>IDR 6.500.000 / Unit</td>
+                </tr>
+                <tr>
+                    <td>Pintu Kamar Flase</td>
+                    <td>IDR 2.450.000 / Unit</td>
+                </tr>
+                <tr>
+                    <td>Ambalan</td>
+                    <td>IDR 450.000 / m²</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- BACKSPLASH / TOP TABLE -->
+        <h3 class="sub-judul-harga">🧱 BACKSPLASH & TOP TABLE</h3>
+        <table class="tabel-produk">
+            <thead>
+                <tr>
+                    <th>Bahan</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Granit Tile</td>
+                    <td>IDR 850.000 / m²</td>
+                </tr>
+                <tr>
+                    <td>PVC Marble</td>
+                    <td>IDR 1.200.000 / m²</td>
+                </tr>
+                <tr>
+                    <td>Granit Marmer</td>
+                    <td>IDR 2.450.000 / m²</td>
+                </tr>
+                <tr>
+                    <td>Kaca Cermin Bevel</td>
+                    <td>IDR 1.550.000 / m²</td>
+                </tr>
+                <tr>
+                    <td>Wallmoulding</td>
+                    <td>IDR 275.000 / m²</td>
+                </tr>
+                <tr>
+                    <td>Meja Bar</td>
+                    <td>IDR 3.150.000 / m¹</td>
+                </tr>
+                <tr>
+                    <td>Meja Island</td>
+                    <td>IDR 3.000.000 / m¹</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- SPESIFIKASI BAHAN -->
+        <div class="spesifikasi-bahan">
+            <h4 style="color:var(--oranye); margin-bottom:0.8rem;">📋 SPESIFIKASI BAHAN STANDAR</h4>
+            <ul style="padding-left:1.5rem;">
+                <li>✅ Play Wood Mercy</li>
+                <li>✅ Laminet HPL Taco / Exampl</li>
+                <li>✅ Double Track Rel</li>
+                <li>✅ Engsel Slow Motion</li>
+                <li>✅ LED Strip</li>
+                <li>✅ Downlight</li>
+            </ul>
+        </div>
+
+        <!-- UPGRADE BAHAN -->
+        <div class="catatan-penting">
+            <h4 style="color:var(--oranye); margin-bottom:0.8rem;">⬆️ HARGA KHUSUS UPGRADE BAHAN</h4>
+            <ul style="padding-left:1.5rem;">
+                <li>🔹 PVC Board — Naik 68% → IDR 3.500.000 / m²</li>
+                <li>🔹 ACP Double Layer — Naik 68% → IDR 3.500.000 / m²</li>
+            </ul>
+        </div>
+
+        <!-- LAYANAN & GARANSI -->
+        <div class="garansi-box">
+            <h4 style="color:var(--oranye); margin-bottom:0.8rem;">💬 LAYANAN & GARANSI</h4>
+            <p><strong>Layanan Konsultasi:</strong> Selebihnya bisa langsung hubungi Customer Service kami. Layanan Gratis 24 Jam (Di luar jam kerja akan dibalas hari berikutnya).</p>
+            <br>
+            <p><strong>Garansi Meliputi:</strong></p>
+            <ul style="padding-left:1.5rem; margin-top:0.5rem;">
+                <li>✅ Kerusakan Tools</li>
+                <li>✅ Kelistrikan</li>
+                <li>✅ Lem Mengelupas</li>
+                <li>✅ Lama Garansi: Mulai 1 Tahun s/d sesuai kesepakatan</li>
+            </ul>
+            <br>
+            <p style="font-weight:500; font-style:italic;">"Kami mengutamakan pelayanan, kepuasan pelanggan adalah tujuan kami."</p>
+        </div>
+
+        <!-- CATATAN DESAIN -->
+        <div class="catatan-penting">
+            <h4 style="color:var(--oranye); margin-bottom:0.8rem;">📝 Catatan Layanan Desain</h4>
+            <ul style="padding-left:1.5rem;">
+                <li>🎁 Jika bangunan dikerjakan oleh kami → mendapat potongan <strong>30%</strong> dari total biaya desain bangunan</li>
+                <li>🎁 Jika pengerjaan interior dikerjakan oleh kami → mendapat potongan <strong>30% s/d 100%</strong> (tergantung masa promo)</li>
+                <li>ℹ️ Harga revisi tambahan hanya dikenakan pada <strong>area yang direvisi saja</strong>, bukan keseluruhan luas bangunan</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- TESTIMONI -->
+<section id="testimoni">
+    <div class="bagian-judul">
+        <h2>💬 Testimoni Pelanggan</h2>
+    </div>
+    <div class="kotak-putih">
+        <div class="testimoni-baris">
+            <div class="testimoni-kartu">
+                <p class="testimoni-teks">"Hasil desainnya sangat bagus dan rapi, pengerjaan tepat waktu. Sangat direkomendasikan!"</p>
+                <p class="testimoni-nama">— Nama Pelanggan 1</p>
+            </div>
+            <div class="testimoni-kartu">
+                <p class="testimoni-teks">"Pelayanan ramah, hasil sesuai harapan. Pasti pakai lagi untuk proyek berikutnya."</p>
+                <p class="testimoni-nama">— Nama Pelanggan 2</p>
+            </div>
+            <div class="testimoni-kartu">
+                <p class="testimoni-teks">"Profesional dan berpengalaman. Desain ruang tamu kami jadi persis seperti yang diinginkan."</p>
+                <p class="testimoni-nama">— Nama Pelanggan 3</p>
+            </div>
+        </div>
+
+        <h3 style="text-align:center; margin-top:3rem; color:var(--coklat-gelap);">🎥 Video Testimoni</h3>
+        <div class="video-grid" style="margin-top:1.5rem;">
+            <div class="video-kartu">
+                <video class="video-pemutar" controls muted>
+                    <source src="testimoni-video-1.mp4" type="video/mp4">
+                    Maaf, peramban Anda tidak mendukung pemutar video.
+                </video>
+                <div class="video-keterangan">
+                    <h4>Pelanggan dari Lumajang</h4>
+                    <p>Pengerjaan desain rumah</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KONTAK + PETA -->
+<section id="kontak">
+    <div class="bagian-judul">
+        <h2>📍 Hubungi Kami</h2>
+    </div>
+    <div class="kotak-putih kontak-info">
+        <p><strong>📍 Alamat</strong> Jl. Mayor Kamari Sampurno No.58, Ditotrunan, Kec. Lumajang, Kab. Lumajang, Jawa Timur — Kode Pos 67316</p>
+        <p><strong>⏰ Jam Buka</strong> Senin–Sabtu: 08.00 – 17.00 WIB</p>
+
+        <div class="sosmed">
+            <a href="https://wa.me/6282232694521" target="_blank" class="tombol-sosmed wa">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+            <a href="https://www.instagram.com/lmj_furnitur_interior?igsh=b3p5NGsxcGw0bnkx" target="_blank" class="tombol-sosmed ig">
+                <i class="fab fa-instagram"></i> IG: LMJ Furnitur
+            </a>
+            <a href="https://www.instagram.com/lmj_build_contractor_?igsh=MW9sZndzcGpsNDVzNQ==" target="_blank" class="tombol-sosmed ig">
+                <i class="fab fa-instagram"></i> IG: LMJ Build Contractor
+            </a>
+            <a href="https://www.tiktok.com/@lumajanginterior?_r=1&_t=ZS-98trtHRwCO8" target="_blank" class="tombol-sosmed tiktok">
+                <i class="fab fa-tiktok"></i> TikTok: Lumajang Interior
+            </a>
+            <a href="https://www.tiktok.com/@lmjkontraktor?_r=1&_t=ZS-98trxorUUXy" target="_blank" class="tombol-sosmed tiktok">
+                <i class="fab fa-tiktok"></i> TikTok: LMJ Kontraktor
+            </a>
+        </div>
+
+        <h3 class="peta-judul">🗺️ Lokasi Kami</h3>
+        <div class="peta-wadah">
+            <iframe 
+                src="https://www.google.com/maps/dir/?api=1&destination=Jl.+Mayor+Kamari+Sampurno+No.58+Ditotrunan+Lumajang+Jawa+Timur+67316&ll=-8.1324145,113.2426365&z=15" 
+                allowfullscreen="" 
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <p style="margin-top:1rem; text-align:center;">
+            <a href="https://maps.app.goo.gl/53aL2NcRT741x6LK9" target="_blank" style="color:var(--oranye); font-weight:500;">
+                🔗 Buka di Google Maps
+            </a>
+        </p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>&copy; 2026 LMJ INTERIOR EKSTERIOR Design | Semua Hak Dilindungi</p>
+</footer>
+
+</body>
+</html>
